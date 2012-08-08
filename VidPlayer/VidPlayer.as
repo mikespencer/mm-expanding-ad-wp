@@ -93,7 +93,7 @@
 		private var vidDisplay:Video;
 		private var ncConnection:NetConnection;
 		private var nsStream:NetStream;
-		private var meta = null;
+		public var meta = null;
 		private var pauseAt:uint;
 		private var isMessage:Boolean = false;
 		private var playEvt:VidPlayerEvent = new VidPlayerEvent('play');
