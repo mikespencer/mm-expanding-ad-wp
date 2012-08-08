@@ -13,7 +13,7 @@ var wpAd = window.wpAd || {};
     }
     this.creative = document.createElement('div');
     this.expanded = false;
-    this.buildSlug();
+    //this.buildSlug();
     this.overlay = this.buildOverlay();
     this.styleOverlay();
     this.pageWidth = parseInt(($('#shell').outerWidth() || 1012), 10);
@@ -47,9 +47,10 @@ var wpAd = window.wpAd || {};
         this.positionOverlay();
         $(this.overlay).appendTo(target).stop(true, false).slideDown();
         
-        try{
-          placeAd2('politics/mentionmachine/expand', 'mm_overlay', 'AJAX', '');
-        }catch(e){}
+        //placeAd2('politics/mentionmachine/expand', 'mm_overlay', 'AJAX', '');
+        
+        //track expands/clicks on tile
+        this.addPixel('http://ad.doubleclick.net/ad/wpni.politics/mentionmachine/expand;sz=1x1;pos=mm_overlay;ord=[timestamp]?');
         
         if(this.expandedImpPix){
           this.addPixel(this.expandedImpPix);
